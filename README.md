@@ -1,6 +1,6 @@
 # Inventory Management Application
 
-A simple inventory management system for Sunglasses Warehouse using sequelize CRUD methods. Create, edit, delete products. The inventory will have the following criterias: Product ID, Brands, Gender, Color, Materials, Shape, Features etc.
+A simple inventory management system for Sunglasses Warehouse using sequelize CRUD methods. Create, edit, delete products. The inventory will have the following criterias: Product ID, Product Name, Product Details(Gender, Color, Materials,Shape, Features etc), Brands, & Units.
 
 Try it [here]()!
 
