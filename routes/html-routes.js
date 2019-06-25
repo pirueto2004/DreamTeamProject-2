@@ -17,9 +17,14 @@ module.exports = function (app) {
   })
 
 
-  // blog route loads inventory.html
+  // inventory route loads inventory.html
   app.get('/inventory', function (req, res) {
     res.sendFile(path.join(__dirname, '../public/inventory.html'))
+  })
+
+  // inventory route loads inventory.html
+  app.get('/new', function (req, res) {
+    res.sendFile(path.join(__dirname, '../public/add_new_product.html'))
   })
 
 }
