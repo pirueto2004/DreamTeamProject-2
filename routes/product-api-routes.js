@@ -16,8 +16,8 @@ module.exports = function (app) {
     // Here we add an "include" property to our options in our findAll query
     // We set the value to an array of the models we want to include in a left outer join
     // In this case, just db.Author
-    db.product.findAll({
-      include: [db.Products]
+    db.Product.findAll({
+      // include: [db.Products]
     }).then(function (dbProducts) {
       res.json(dbProducts)
     })
@@ -28,7 +28,7 @@ module.exports = function (app) {
     // Here we add an "include" property to our options in our findOne query
     // We set the value to an array of the models we want to include in a left outer join
     // In this case, just db.Author
-    db.Item.findOne({
+    db.Product.findOne({
       where: {
         id: req.params.id
       },
@@ -40,14 +40,14 @@ module.exports = function (app) {
 
   // POST route for saving a new post
   app.post('/products', function (req, res) {
-    db.Item.create(req.body).then(function (dbProducts) {
+    db.Product.create(req.body).then(function (dbProducts) {
       res.json(dbProducts)
     })
   })
 
   // DELETE route for deleting posts
   app.delete('/products/:id', function (req, res) {
-    db.Item.destroy({
+    db.Product.destroy({
       where: {
         id: req.params.id
       }
@@ -58,7 +58,7 @@ module.exports = function (app) {
 
   // PUT route for updating posts
   app.put('/products', function (req, res) {
-    db.Item.update(
+    db.Product.update(
       req.body,
       {
         where: {

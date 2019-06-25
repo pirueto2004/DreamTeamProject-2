@@ -1,5 +1,6 @@
 $(document).ready(function () {
-    var todayDate = new Date()
+    
+    //var todayDate = new Date()
   
     getProducts();
   
@@ -25,8 +26,10 @@ $(document).ready(function () {
         '<td>' + product.Units + '</td>' +
        
         '<td>' +
-          '<button class="delete product-options animated infinite pulse" data-value="' + product.id + '">delete</button>' +
-          '<button class="edit product-options animated infinite pulse" data-value="' + product.ProductId + '">edit</button>' +
+          '<button class="delete product-options animated infinite pulse" data-value="' + product.ProductId + '">edit</button>' + 
+        '</td>' +
+        '<td>' +
+          '<button class="edit product-options animated infinite pulse" data-value="' + product.ProductId + '">delete</button>' +
         '</td>' +
       '</tr>'
   
